@@ -4,10 +4,10 @@ MAINTAINER Peter Martini <PeterCMartini@GMail.com>
 WORKDIR /root
 
 # YAML is a "soft" dependency, but its apparently needed for even the default CMD below
-RUN curl -L http://cpanmin.us | perl - YAML
+RUN cpanm YAML
 
 # Install Dancer itself
-RUN curl -L http://cpanmin.us | perl - Dancer
+RUN cpanm Dancer
 
 EXPOSE 3000
 
